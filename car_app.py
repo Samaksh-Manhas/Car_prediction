@@ -4,6 +4,7 @@ import joblib
 
 model = joblib.load("car_price_model.pkl")
 feature_names = joblib.load("feature_names.pkl")
+city_list = joblib.load("city_list.pkl")
 
 registered_year = st.sidebar.slider(
     "Registered Year",
@@ -90,16 +91,10 @@ body_type = st.sidebar.selectbox(
     ]
 )
 
+
 city = st.sidebar.selectbox(
     "City",
-    sorted([
-        "Delhi",
-        "Mumbai",
-        "Bangalore",
-        "Chennai",
-        "Hyderabad",
-        "Pune"
-    ])
+    city_list
 )
 
 full_name = st.sidebar.text_input(
