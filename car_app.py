@@ -46,6 +46,11 @@ mileage = st.sidebar.number_input(
     18.0
 )
 
+city = st.sidebar.selectbox(
+    "City",
+    city_list
+)
+
 insurance = st.sidebar.selectbox(
     "Insurance",
     ["Yes","No"]
@@ -89,12 +94,6 @@ body_type = st.sidebar.selectbox(
         "Minivan",
         "Pickup Truck"
     ]
-)
-
-
-city = st.sidebar.selectbox(
-    "City",
-    city_list
 )
 
 full_name = st.sidebar.text_input(
