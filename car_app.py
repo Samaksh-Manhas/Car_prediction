@@ -143,12 +143,48 @@ if st.button("Predict Price"):
 
     prediction = model.predict(input_df)
 
-    st.success(
-        f"Estimated Resale Price : ₹ {prediction[0]:.2f} Lakhs"
+    st.success("Prediction Completed Successfully!")
+
+    st.metric(
+        label="Estimated Resale Price",
+        value=f"{prediction[0]:.2f} Lakhs"
     )
 
+    st.balloons()
 
-st.metric(
-    "Estimated Price",
-    f"₹ {prediction[0]:.2f} Lakhs"
-)
+    st.write("### Car Details")
+
+    details = pd.DataFrame({
+        "Feature": [
+            "Registered Year",
+            "Engine Capacity",
+            "Kilometers Driven",
+            "Max Power",
+            "Seats",
+            "Mileage",
+            "Insurance",
+            "Owner Type",
+            "Transmission",
+            "Fuel Type",
+            "Body Type",
+            "City",
+            "Car Name"
+        ],
+        "Value": [
+            registered_year,
+            f"{engine_capacity} CC",
+            f"{kms_driven:,} Kms",
+            f"{max_power} bhp",
+            seats,
+            f"{mileage} kmpl",
+            insurance,
+            owner_type,
+            transmission_type,
+            fuel_type,
+            body_type,
+            city,
+            full_name
+        ]
+    })
+
+    st.table(details)
