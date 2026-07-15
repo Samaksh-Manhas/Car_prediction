@@ -150,7 +150,6 @@ if st.button("Predict Price"):
         value=f"{prediction[0]:.2f} Lakhs"
     )
 
-    st.balloons()
 
     st.write("### Car Details")
 
