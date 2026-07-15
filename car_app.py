@@ -51,6 +51,20 @@ city = st.sidebar.selectbox(
     city_list
 )
 
+body_type = st.sidebar.selectbox(
+    "Body Type",
+    [
+        "Hatchback",
+        "Sedan",
+        "SUV",
+        "MUV",
+        "Coupe",
+        "Convertible",
+        "Minivan",
+        "Pickup Truck"
+    ]
+)
+
 insurance = st.sidebar.selectbox(
     "Insurance",
     ["Yes","No"]
@@ -66,11 +80,6 @@ owner_type = st.sidebar.selectbox(
     ]
 )
 
-transmission_type = st.sidebar.selectbox(
-    "Transmission",
-    ["Manual","Automatic"]
-)
-
 fuel_type = st.sidebar.selectbox(
     "Fuel Type",
     [
@@ -82,18 +91,9 @@ fuel_type = st.sidebar.selectbox(
     ]
 )
 
-body_type = st.sidebar.selectbox(
-    "Body Type",
-    [
-        "Hatchback",
-        "Sedan",
-        "SUV",
-        "MUV",
-        "Coupe",
-        "Convertible",
-        "Minivan",
-        "Pickup Truck"
-    ]
+transmission_type = st.sidebar.selectbox(
+    "Transmission",
+    ["Manual","Automatic"]
 )
 
 full_name = st.sidebar.text_input(
