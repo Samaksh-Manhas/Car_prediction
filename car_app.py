@@ -387,25 +387,16 @@ if predict_button:
     predicted_price = prediction[0]
 
     # Prediction Card
-    st.markdown(
+    st.html(
         f"""
         <div class="prediction-card">
-
-            <div class="prediction-label">
-                Estimated Resale Price
-            </div>
-
-            <div class="prediction-value">
-                ₹ {predicted_price:.2f} Lakhs
-            </div>
-
+            <div class="prediction-label">Estimated Resale Price</div>
+            <div class="prediction-value">₹ {predicted_price:.2f} Lakhs</div>
             <div class="prediction-note">
                 Estimated value based on the vehicle information provided
             </div>
-
         </div>
-        """,
-        unsafe_allow_html=True
+        """
     )
 
 
